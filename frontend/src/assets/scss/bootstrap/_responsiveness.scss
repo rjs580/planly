@@ -1,0 +1,15 @@
+.body-wrapper {
+  margin: 0 auto;
+  max-width: 950px;
+}
+
+@media screen and (max-width: 1120px) {
+  .body-wrapper {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+body {
+  @extend .body-wrapper;
+}
