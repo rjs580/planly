@@ -1,0 +1,9 @@
+@import "assets/scss/bootstrap/variable"; // override bootstrap variables
+@import "~bootstrap/scss/bootstrap"; // bootstrap styling
+@import "assets/scss/hamburgers/variable"; // override hamburger variables
+@import "~hamburgers/_sass/hamburgers/hamburgers"; // hamburger styling
+@import "assets/scss/sweetalert2/variable"; // override sweetalert2 styling
+@import "~sweetalert2/src/sweetalert2"; // sweetalert2 styling
+
+// custom bootstrap properties
+@import "assets/scss/bootstrap/reboot";
