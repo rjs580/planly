@@ -1,20 +1,26 @@
-<nav class="fixed-top navbar navbar-expand-md navbar-light bg-light d-block">
+<nav class="fixed-top navbar navbar-expand-md navbar-light bg-light d-block px-0">
   <div class="body-wrapper d-flex justify-content-between">
-    <a href="#" class="navbar-brand">Brand</a>
+    <a href="#" class="navbar-brand">
+      <img class="img-brand" src="assets/img/logo/brand.svg" alt="">
+    </a>
 
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="navbar-toggler">
+      <button class="hamburger p-m-0" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
 
-    <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="collapse navbar-collapse">
       <div class="navbar-nav ml-auto">
         <ng-container *ngFor="let item of navbarItems" [ngSwitch]="item.type">
           <ng-template [ngSwitchCase]="NavbarItems.LINK">
-            <a class="nav-item nav-link" [translate]="item.content"></a>
+            <a class="nav-item nav-link mx-3" [translate]="item.content"></a>
           </ng-template>
 
           <ng-template [ngSwitchCase]="NavbarItems.SEPARATOR">
-            <a class="nav-item nav-link disabled">{{item.content}}</a>
+            <a class="nav-item nav-link disabled mx-2">{{item.content}}</a>
           </ng-template>
 
           <ng-template [ngSwitchCase]="NavbarItems.BUTTON">

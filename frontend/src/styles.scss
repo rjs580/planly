@@ -1,3 +1,5 @@
+@import "assets/scss/planly/variable"; // app variables
+
 @import "assets/scss/bootstrap/variable"; // override bootstrap variables
 @import "~bootstrap/scss/bootstrap"; // bootstrap styling
 @import "assets/scss/hamburgers/variable"; // override hamburger variables
@@ -10,3 +12,7 @@
 @import "assets/scss/bootstrap/responsiveness";
 @import "assets/scss/bootstrap/button";
 @import "assets/scss/bootstrap/navbar";
+@import "assets/scss/bootstrap/type";
+
+// custom planly
+@import "assets/scss/core/helper";

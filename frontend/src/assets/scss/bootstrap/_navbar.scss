@@ -1,3 +1,11 @@
 .nav-item {
   @extend .px-1;
 }
+
+.navbar-toggler {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border: none !important;
+}
