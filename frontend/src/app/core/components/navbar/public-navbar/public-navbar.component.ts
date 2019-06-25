@@ -16,4 +16,21 @@ export class PublicNavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleSidebar(hamburger: HTMLButtonElement, sidebar: HTMLDivElement, overlay: HTMLDivElement, event: Event) {
+    if (hamburger.classList.contains("is-active")) {
+      hamburger.classList.remove("is-active");
+      sidebar.classList.remove("px-3");
+      sidebar.style.width = "0";
+      overlay.style.opacity = "0";
+      overlay.style.visibility = "hidden";
+    } else {
+      hamburger.classList.add("is-active");
+      sidebar.classList.add("px-3");
+      sidebar.style.width = "250px";
+      overlay.style.visibility = "visible";
+      overlay.style.opacity = "1";
+    }
+
+    event.stopPropagation();
+  }
 }

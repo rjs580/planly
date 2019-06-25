@@ -7,7 +7,7 @@ export const NAVBAR_ITEMS = [
   new NavbarLink("How it works", "/"),
   new NavbarLink("Pricing", "/"),
   new NavbarLink("FAQ", "/"),
-  new NavbarButton("Log in", ""),
+  new NavbarButton("LOG IN", ""),
   new NavbarSeparator(),
-  new NavbarButton("Get Planly", "")
+  new NavbarButton("GET PLANLY", "")
 ];
