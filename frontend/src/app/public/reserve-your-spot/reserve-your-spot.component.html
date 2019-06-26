@@ -1,0 +1,62 @@
+<section>
+  <div class="row align-items-center">
+    <div class="col-12 text-center">
+      <h2 class="font-weight-bold">Launching Fall of 2019</h2>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="row align-items-center">
+    <div class="col-12 text-center">
+      <h2 class="font-weight-bold">$50 reservation fee.</h2>
+      <h2 class="font-weight-bold">100% refundable.</h2>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="row align-items-center">
+    <div class="col-12 text-left">
+      <p>Reserve your spot today and receive 40% off our one-time setup fee!</p>
+      <p> This deposit is 100% refundable and you can cancel your reservation at any time.
+        Your reservation fee will be put towards your initial payment and will prioritize your spot in line.</p>
+      <p>Once we launch we will invite you to fill out your profile and begin working with your advisor!</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="row align-items-center justify-content-center">
+    <div class="col-10">
+      <form #reservationForm class="text-left py-2 py-md-4" (submit)="onSubmit(reservationForm, name.value, email.value, $event)">
+        <div class="form-row">
+          <div class="form-group col-md-5">
+            <label class="planly-label" for="name">Name</label>
+            <input #name id="name" type="text" class="form-control form-control-stripe" placeholder="Stanley Planly" required>
+          </div>
+          <div class="col-md-2"></div>
+          <div class="form-group col-md-5">
+            <label class="planly-label" for="email">Email</label>
+            <input #email type="email" id="email" class="form-control form-control-stripe" placeholder="stanley@getplanly.com" required>
+          </div>
+        </div>
+        <div class="px-4 py-2 rounded-sm form-control-stripe">
+          <div id="card-element"></div>
+        </div>
+
+        <div class="form-row mt-2">
+          <div class="form-group col-md-12">
+            <div class="ml-3 form-check">
+              <input class="form-check-input" type="checkbox" #reservation id="reservation" required>
+              <label class="form-check-label font-small-3" for="reservation">
+                I agree to the <a class="text-a-secondary" href="assets/legal/Planly Inc - Reservation Agreement.pdf" target="_blank">Planly Reservation Agreement</a>
+              </label>
+            </div>
+          </div>
+        </div>
+        <button class="btn-planly btn-block" type="submit">Submit Reservation</button>
+      </form>
+    </div>
+  </div>
+</section>

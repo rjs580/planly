@@ -46,3 +46,27 @@
     border-width: 2px !important;
   }
 }
+
+.btn-planly-alt {
+  @extend .btn;
+  @extend .rounded-pill;
+  @extend .py-1;
+
+  color: white;
+  background-color: $accent-primary;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: transparent solid 2px !important;
+
+  &:focus {
+    border-color: $accent-primary;
+    box-shadow: inset 0 1px 1px rgba($accent-primary, 0.075), 0 0 0 0.2rem rgba($accent-primary, 0.25);
+  }
+
+  &:hover {
+    color: $accent-primary;
+    background-color: white;
+    border-color: $accent-primary !important;
+    border-width: 2px !important;
+  }
+}

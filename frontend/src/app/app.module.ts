@@ -11,6 +11,7 @@ import {CoreModule} from "./core/core.module";
 import { MainPublicComponent } from "./layouts/main-public/main-public.component";
 import { MainPrivateComponent } from "./layouts/main-private/main-private.component";
 import {PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface, PerfectScrollbarModule} from "ngx-perfect-scrollbar";
+import {NgxStripeModule} from "ngx-stripe";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -40,7 +41,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         deps: [HttpClient]
       }
     }),
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    NgxStripeModule.forRoot("pk_live_V6QtKAZQa9VKrmzt3Nf7hevj00vubTshSP")
   ],
   providers: [
     {provide: PERFECT_SCROLLBAR_CONFIG, useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG}

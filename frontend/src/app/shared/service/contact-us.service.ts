@@ -1,13 +1,14 @@
 import { Injectable } from "@angular/core";
+import {GetPlanlyService} from "./get-planly.service";
 
 @Injectable({
   providedIn: "root"
 })
 export class ContactUsService {
 
-  constructor() { }
+  constructor(private getplanlyService: GetPlanlyService) { }
 
   buttonClicked() {
-    console.log("contact us");
+    this.getplanlyService.buttonClicked();
   }
 }

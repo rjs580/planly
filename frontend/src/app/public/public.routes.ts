@@ -6,5 +6,6 @@ export const PUBLIC_ROUTES: Routes = [
   {path: "about", loadChildren: "./public/about/about.module#AboutModule", data: {preload: true, delay: true}},
   {path: "how-it-works", loadChildren: "./public/how-it-works/how-it-works.module#HowItWorksModule", data: {preload: false, delay: false}},
   {path: "pricing", loadChildren: "./public/pricing/pricing.module#PricingModule", data: {preload: true, delay: true}},
-  {path: "faq", loadChildren: "./public/faq/faq.module#FAQModule", data: {preload: true, delay: true}}
+  {path: "faq", loadChildren: "./public/faq/faq.module#FAQModule", data: {preload: false, delay: false}},
+  {path: "reserve-your-spot", loadChildren: "./public/reserve-your-spot/reserve-your-spot.module#ReserveYourSpotModule", data: {preload: false, delay: false}}
 ];
