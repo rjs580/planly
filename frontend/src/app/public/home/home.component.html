@@ -1,11 +1,15 @@
-<div class="row align-items-center">
-  <div class="col-sm-12 col-md-8 text-left">
-    <h1 class="title">No sales pitch, no stress.</h1>
-    <p class="font-large-1">The way financial advice was meant to be.</p>
+<div class="row flex-md-row-reverse align-items-center justify-content-center height-400">
+  <div class="col-8 col-sm-5 col-md-4 col-lg-4 d-flex justify-content-center">
+    <img src="assets/img/home/img1.svg" class="img-fluid" style="max-height: 280px;" alt="">
+
+    <!--    <ng-container *ngFor="let img of homeImgs">-->
+    <!--      <img [src]="img.src" class="img-fluid img-fade" [ngStyle]="{'opacity': img.opacity, 'height': img.opacity == 0 ? '0px' : 'auto'}" style="max-height: 280px; max-width: 300px;" alt="">-->
+    <!--    </ng-container>-->
   </div>
-  <div class="col d-none d-md-block pr-0">
-    <ng-container *ngFor="let img of homeImgs">
-      <img [src]="img.src" class="img-fluid img-fade" [ngStyle]="{'opacity': img.opacity, 'height': img.opacity == 0 ? '0px' : 'auto'}" style="max-height: 280px;" alt="">
-    </ng-container>
+  <div class="col-sm-12 col-md-8 text-left d-flex justify-content-center flex-wrap">
+    <div class="title">A plan for <span class="title-huge">you</span>,<br>not just your money.
+      <div class="mt-2"><button class="btn-planly">Get planly</button></div>
+    </div>
+
   </div>
 </div>

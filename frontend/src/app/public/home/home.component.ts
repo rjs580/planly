@@ -34,6 +34,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   changeHeaderImage() {
+    return; // TODO: Fix images and remove this
+
     this.homeImgs[this.homeImgIndex].opacity = "0";
     this.homeImgIndex++;
     if (this.homeImgIndex >= this.homeImgs.length) {

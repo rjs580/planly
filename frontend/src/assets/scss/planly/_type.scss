@@ -1,0 +1,9 @@
+.title {
+  @extend h1;
+  //font-weight: 500;
+}
+
+.title-huge {
+  font-size: $font-size-base * 3.8;
+  font-weight: 700;
+}
