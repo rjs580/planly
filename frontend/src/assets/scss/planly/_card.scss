@@ -1,0 +1,25 @@
+.card-header {
+  background-color: transparent;
+}
+
+.card-accordion {
+  border-radius: 0 !important;
+  border-color: black;
+  border-bottom: 0 !important;
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+
+.btn-accordion {
+  box-shadow: none !important;
+}
+
+.accordion {
+  border-radius: $border-radius !important;
+  overflow: hidden;
+}
+
+.card-body-accordion {
+  border-top: $font-secondary solid 1px;
+}

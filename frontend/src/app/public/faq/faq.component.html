@@ -1,0 +1,33 @@
+<section>
+  <div class="row align-items-center">
+    <div class="col-12 text-center">
+      <h2 class="font-weight-bold">FAQ</h2>
+    </div>
+  </div>
+</section>
+
+<section class="sub-section">
+
+  <ng-container *ngFor="let q of questions; let i = index" [attr.data-index]="i">
+    <div class="accordion no-border shadow my-4" [id]="'faqAccordion' + i">
+      <div class="card card-accordion">
+        <div class="card-header px-0 d-flex align-items-center justify-content-center" [id]="'heading' + i">
+          <button class="btn text-left btn-accordion" type="button" data-toggle="collapse" [attr.data-target]="'#collapse' + i" aria-expanded="true" [attr.aria-controls]="'collapse' + i">
+            <h4 class="font-weight-bold">{{q.question}}</h4>
+          </button>
+        </div>
+
+        <div [id]="'collapse' + i" class="collapse" [attr.aria-labelledby]="'heading' + i" [attr.data-parent]="'#faqAccordion' + i">
+          <div class="card-body card-body-accordion">
+            <p [innerHTML]="q.answer"></p>
+            <div [innerHTML]="q.extras | sanitizeHTML"></div>
+            <div *ngIf="i === 4">
+              <button class="btn-planly" (click)="contactUs()">Contact us</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+</section>

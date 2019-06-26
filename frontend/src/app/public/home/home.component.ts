@@ -1,6 +1,7 @@
 import {Component, OnDestroy, OnInit} from "@angular/core";
 import {HomeImage} from "../../shared/models/home-image";
 import {GetPlanlyService} from "../../shared/service/get-planly.service";
+import {ContactUsService} from "../../shared/service/contact-us.service";
 
 @Component({
   selector: "app-home",
@@ -34,7 +35,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   public theirAdvisingHeight: number;
   public theirAdvisingHeightString: string;
 
-  constructor(private getplanly: GetPlanlyService) {
+  constructor(private getplanly: GetPlanlyService, private contactService: ContactUsService) {
   }
 
   ngOnInit() {
@@ -69,6 +70,10 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   getPlanly() {
     this.getplanly.buttonClicked();
+  }
+
+  contactUs() {
+    this.contactService.buttonClicked();
   }
 
   ngOnDestroy() {

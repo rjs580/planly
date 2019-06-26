@@ -10,6 +10,7 @@ import { LaunchingComponent } from "./components/launching/launching.component";
 import {RouterModule} from "@angular/router";
 import {GetPlanlyService} from "./service/get-planly.service";
 import { SanitizeHTML } from "./pipes/sanitize-html.pipe";
+import {ContactUsService} from "./service/contact-us.service";
 
 @NgModule({
   declarations: [ClickOutsideDirective, InputSliderComponent, InitElementDirective, FiduciaryComponent, LaunchingComponent, SanitizeHTML],
@@ -28,7 +29,8 @@ import { SanitizeHTML } from "./pipes/sanitize-html.pipe";
   ],
   providers: [
     SweetAlert,
-    GetPlanlyService
+    GetPlanlyService,
+    ContactUsService
   ]
 })
 export class SharedModule {
