@@ -3,3 +3,15 @@
 //  margin-inline-start: -3px;
 //  margin-block-start: 0;
 //}
+
+.overhang-punctuation {
+  hanging-punctuation: first !important;
+  text-indent: -0.58em;
+}
+
+@include media-breakpoint-down(md) {
+  .overhang-punctuation {
+    hanging-punctuation: none !important;
+    text-indent: 0;
+  }
+}
