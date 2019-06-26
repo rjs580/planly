@@ -10,10 +10,16 @@ import {SharedModule} from "./shared/shared.module";
 import {CoreModule} from "./core/core.module";
 import { MainPublicComponent } from "./layouts/main-public/main-public.component";
 import { MainPrivateComponent } from "./layouts/main-private/main-private.component";
+import {PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface, PerfectScrollbarModule} from "ngx-perfect-scrollbar";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
 }
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true,
+  wheelPropagation: false
+};
 
 @NgModule({
   declarations: [
@@ -33,9 +39,12 @@ export function createTranslateLoader(http: HttpClient) {
         useFactory: createTranslateLoader,
         deps: [HttpClient]
       }
-    })
+    }),
+    PerfectScrollbarModule
   ],
-  providers: [],
+  providers: [
+    {provide: PERFECT_SCROLLBAR_CONFIG, useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

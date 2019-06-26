@@ -1,5 +1,6 @@
 import {Component, OnDestroy, OnInit} from "@angular/core";
 import {HomeImage} from "../../shared/models/home-image";
+import {GetPlanlyService} from "../../shared/service/get-planly.service";
 
 @Component({
   selector: "app-home",
@@ -33,7 +34,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   public theirAdvisingHeight: number;
   public theirAdvisingHeightString: string;
 
-  constructor() {
+  constructor(private getplanly: GetPlanlyService) {
   }
 
   ngOnInit() {
@@ -64,6 +65,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     const maxVal = 188;
     const minVal = 113;
     return ((fee - minVal) / (maxVal - minVal)) * (200 - 120) + 120;
+  }
+
+  getPlanly() {
+    this.getplanly.buttonClicked();
   }
 
   ngOnDestroy() {

@@ -8,15 +8,18 @@ import { InitElementDirective } from "./directives/init-element.directive";
 import { FiduciaryComponent } from "./components/fiduciary/fiduciary.component";
 import { LaunchingComponent } from "./components/launching/launching.component";
 import {RouterModule} from "@angular/router";
+import {GetPlanlyService} from "./service/get-planly.service";
+import { SanitizeHTML } from "./pipes/sanitize-html.pipe";
 
 @NgModule({
-  declarations: [ClickOutsideDirective, InputSliderComponent, InitElementDirective, FiduciaryComponent, LaunchingComponent],
+  declarations: [ClickOutsideDirective, InputSliderComponent, InitElementDirective, FiduciaryComponent, LaunchingComponent, SanitizeHTML],
   exports: [
     TranslateModule,
     ClickOutsideDirective,
     InputSliderComponent,
     FiduciaryComponent,
-    LaunchingComponent
+    LaunchingComponent,
+    SanitizeHTML
   ],
   imports: [
     CommonModule,
@@ -24,7 +27,8 @@ import {RouterModule} from "@angular/router";
     TranslateModule
   ],
   providers: [
-    SweetAlert
+    SweetAlert,
+    GetPlanlyService
   ]
 })
 export class SharedModule {
