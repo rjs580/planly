@@ -1,4 +1,11 @@
-<!--<div style="height: 1000px;">-->
-<h1>Home</h1>
-<p>home works!</p>
-<!--</div>-->
+<div class="row align-items-center">
+  <div class="col-sm-12 col-md-8 text-left">
+    <h1 class="title">No sales pitch, no stress.</h1>
+    <p class="font-large-1">The way financial advice was meant to be.</p>
+  </div>
+  <div class="col d-none d-md-block pr-0">
+    <ng-container *ngFor="let img of homeImgs">
+      <img [src]="img.src" class="img-fluid img-fade" [ngStyle]="{'opacity': img.opacity, 'height': img.opacity == 0 ? '0px' : 'auto'}" style="max-height: 280px;" alt="">
+    </ng-container>
+  </div>
+</div>

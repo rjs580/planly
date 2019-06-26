@@ -30,24 +30,24 @@ export class ReusableNavbarComponent implements OnInit {
     event.stopPropagation();
   }
 
-  @HostListener("window:scroll", ["$event"])
-  onWindowScroll(e) {
-    console.log("scrolling");
-
-    if (window.pageYOffset > 2) {
-      const el = document.getElementById("navbar");
-      el.classList.add("shadow");
-    } else {
-      const el = document.getElementById("navbar");
-      el.classList.remove("shadow");
-    }
-
-    // if (window.pageYOffset > 550) {
-    //   let element = document.getElementById("navbar");
-    //   element.classList.add("sticky");
-    // } else {
-    //   let element = document.getElementById("navbar");
-    //   element.classList.remove("sticky");
-    // }
-  }
+  // @HostListener("window:scroll", ["$event"])
+  // onWindowScroll(e) {
+  //   console.log("scrolling");
+  //
+  //   if (window.pageYOffset > 2) {
+  //     const el = document.getElementById("navbar");
+  //     el.classList.add("shadow");
+  //   } else {
+  //     const el = document.getElementById("navbar");
+  //     el.classList.remove("shadow");
+  //   }
+  //
+  //   // if (window.pageYOffset > 550) {
+  //   //   let element = document.getElementById("navbar");
+  //   //   element.classList.add("sticky");
+  //   // } else {
+  //   //   let element = document.getElementById("navbar");
+  //   //   element.classList.remove("sticky");
+  //   // }
+  // }
 }
