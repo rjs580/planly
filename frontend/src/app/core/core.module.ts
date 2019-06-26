@@ -7,12 +7,14 @@ import { PublicNavbarComponent } from "./components/navbar/public-navbar/public-
 import { PrivateNavbarComponent } from "./components/navbar/private-navbar/private-navbar.component";
 import {AuthService} from "./services/auth/auth.service";
 import { ReusableNavbarComponent } from "./components/navbar/reusable-navbar/reusable-navbar.component";
+import { FooterComponent } from "./components/footer/footer.component";
 
 @NgModule({
-  declarations: [PublicNavbarComponent, PrivateNavbarComponent, ReusableNavbarComponent],
+  declarations: [PublicNavbarComponent, PrivateNavbarComponent, ReusableNavbarComponent, FooterComponent],
   exports: [
     PrivateNavbarComponent,
-    PublicNavbarComponent
+    PublicNavbarComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,

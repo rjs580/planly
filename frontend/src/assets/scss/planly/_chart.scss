@@ -1,0 +1,17 @@
+.chart-offset {
+  margin-top: 5.8rem !important;
+}
+
+.chart-grow-up {
+  bottom: 40px !important;
+}
+
+@include media-breakpoint-down(md) {
+  .chart-offset {
+    margin-top: 8rem !important;
+  }
+
+  .chart-grow-up {
+    bottom: 40px !important;
+  }
+}

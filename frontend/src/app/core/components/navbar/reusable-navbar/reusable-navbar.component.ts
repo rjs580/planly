@@ -30,6 +30,17 @@ export class ReusableNavbarComponent implements OnInit {
     event.stopPropagation();
   }
 
+  closeSidebar(hamburger: HTMLButtonElement, sidebar: HTMLDivElement, overlay: HTMLDivElement): void {
+    if (hamburger.classList.contains("is-active")) {
+      hamburger.classList.remove("is-active");
+      sidebar.classList.remove("px-3");
+      sidebar.style.width = "0";
+      overlay.style.opacity = "0";
+      overlay.style.visibility = "hidden";
+    }
+  }
+
+
   // @HostListener("window:scroll", ["$event"])
   // onWindowScroll(e) {
   //   console.log("scrolling");

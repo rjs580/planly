@@ -1,15 +1,103 @@
-<div class="row flex-md-row-reverse align-items-center justify-content-center height-400">
-  <div class="col-8 col-sm-5 col-md-4 col-lg-4 d-flex justify-content-center">
-    <img src="assets/img/home/img1.svg" class="img-fluid" style="max-height: 280px;" alt="">
+<section class="section-0">
+  <div class="row flex-md-row-reverse align-items-center justify-content-center height-400">
+    <div class="col-8 col-sm-5 col-md-4 col-lg-4 d-flex justify-content-center">
+      <img src="assets/img/home/img1.svg" class="img-fluid" style="max-height: 280px;" alt="">
 
-    <!--    <ng-container *ngFor="let img of homeImgs">-->
-    <!--      <img [src]="img.src" class="img-fluid img-fade" [ngStyle]="{'opacity': img.opacity, 'height': img.opacity == 0 ? '0px' : 'auto'}" style="max-height: 280px; max-width: 300px;" alt="">-->
-    <!--    </ng-container>-->
+      <!--    <ng-container *ngFor="let img of homeImgs">-->
+      <!--      <img [src]="img.src" class="img-fluid img-fade" [ngStyle]="{'opacity': img.opacity, 'height': img.opacity == 0 ? '0px' : 'auto'}" style="max-height: 280px; max-width: 300px;" alt="">-->
+      <!--    </ng-container>-->
+    </div>
+    <div class="col-sm-12 col-md-8 text-left d-flex justify-content-center">
+      <div class="h3">A plan for <span class="h1 font-weight-bold">you</span>,<br>not just your money.
+        <div class="mt-2">
+          <button class="btn-planly">Get planly</button>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-sm-12 col-md-8 text-left d-flex justify-content-center flex-wrap">
-    <div class="title">A plan for <span class="title-huge">you</span>,<br>not just your money.
-      <div class="mt-2"><button class="btn-planly">Get planly</button></div>
+</section>
+
+<section>
+  <div class="text-left d-flex justify-content-center">
+    <div class="h2 font-weight-bold">100% unbiased advice from <br>Certified Financial Planners <sup class="h4">&trade;</sup></div>
+  </div>
+</section>
+
+<section>
+  <div class="row align-items-center">
+    <div class="col-sm-12 col-md-5">
+      <img src="assets/img/home/humans_and_robot.svg" class="img-fluid" style="max-height: 340px;" alt="">
+    </div>
+    <div class="col-sm-1 col-md-1"></div>
+    <div class="col-sm-12 col-md-6 text-left mt-5 mt-md-0">
+      <h4 class="font-weight-bold">Humans & robots<br>working together</h4>
+      <p class="my-3">
+        Powerful software that optimizes every
+        aspect of your money, while our human
+        advisors get to know the real you.
+      </p>
+      <button class="btn-planly" routerLink="/how-it-works">How it works</button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="row align-items-center">
+    <div class="col-12">
+      <h4 class="font-weight-bold">Less is more (a lot more)</h4>
+      <p class="mb-2">The same price. No matter how big your investments grow.</p>
+      <p>Use the slider to see how much you can save compared to traditional financial advice.</p>
+    </div>
+  </div>
+
+  <div class="row flex-md-row-reverse chart-offset">
+    <div class="col-sm-12 col-md-4 d-flex justify-content-center">
+      <div class="mb-3 width-80 text-center">
+        <h5 class="">Us</h5>
+        <div class="card border-0 bg-a-secondary height-75 rounded d-flex align-items-center justify-content-center text-white">
+          <h5 class="mx-0 my-0 px-0 py-0 text-white">$65</h5>
+          <p class="mx-0 my-0 px-0 py-0">/month</p>
+        </div>
+      </div>
+
+      <div class="mb-3 width-80 text-center ml-5 position-relative height-150">
+        <div class="position-absolute width-80 chart-grow-up">
+          <h5 class="">Them</h5>
+          <div [ngStyle]="{'height': theirAdvisingHeightString}" class="card border-0 bg-off-gray rounded d-flex align-items-center justify-content-center text-white">
+            <h5 class="mx-0 my-0 px-0 py-0 text-white">${{theirAdvisingFee | number: '1.0-0'}}</h5>
+            <p class="mx-0 my-0 px-0 py-0">/month</p>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <div class="col-sm-12 col-md-4">
+    </div>
+
+    <div class="col-sm-12 col-md-4">
+      <div class="mb-3">
+        <p class="mb-0 pb-0 font-weight-bold">Advisor fee <span class="float-right">{{advisorValue | number: '1.2-2'}}%</span></p>
+        <input-slider min="0.9" max="1.5" value="1.0" step="0.01" (valueChange)="updateAdvisorValue($event)"></input-slider>
+        <p class="mt-1 font-medium-4">Based on a $150,000 portfolio</p>
+      </div>
+      <button class="btn-planly" routerLink="/pricing">Our pricing</button>
+    </div>
   </div>
-</div>
+</section>
+
+<fiduciary></fiduciary>
+
+<section>
+  <div class="row align-items-center">
+    <div class="col-sm-12 col-md-4">
+      <img src="assets/img/home/always_updating.svg" class="img-fluid" style="max-height: 200px;" alt="">
+    </div>
+    <div class="col-sm-1 col-md-1"></div>
+    <div class="col-sm-12 col-md-7 text-left mt-5 mt-md-0">
+      <h4 class="font-weight-bold">Always updating</h4>
+      <p>We’re building this for you so we need your feedback to make it better!</p>
+      <p>If there’s a feature you would like, or something that needs to change, let us know!</p>
+      <button class="btn-planly">Chat with us</button>
+    </div>
+  </div>
+</section>

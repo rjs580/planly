@@ -2,7 +2,7 @@
   <!-- Navbar -->
   <ng-container *ngFor="let item of navbarItems" [ngSwitch]="item.type" navbar>
     <ng-template [ngSwitchCase]="NavbarItems.LINK">
-      <a class="nav-item nav-link mx-3" [translate]="item.content" [routerLink]="item.link"></a>
+      <a class="nav-item nav-link mx-3 font-weight-bold" [translate]="item.content" [routerLink]="item.link"></a>
     </ng-template>
 
     <ng-template [ngSwitchCase]="NavbarItems.SEPARATOR">
@@ -18,7 +18,7 @@
   <div sidebar>
     <ng-container *ngFor="let item of navbarItems" [ngSwitch]="item.type">
       <ng-template [ngSwitchCase]="NavbarItems.LINK">
-        <a class="nav-item nav-link" [translate]="item.content" [routerLink]="item.link"></a>
+        <a class="nav-item nav-link font-weight-bold" [translate]="item.content" [routerLink]="item.link"></a>
       </ng-template>
 
       <ng-template [ngSwitchCase]="NavbarItems.SEPARATOR">

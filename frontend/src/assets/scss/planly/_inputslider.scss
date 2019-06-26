@@ -1,0 +1,43 @@
+$track-height: 12px;
+$track-border-radius: 8px;
+$thumb-size: 36px;
+
+$track-foreground: $accent-secondary;
+$track-background: theme-color("off-gray");
+$thumb-background: $accent-primary;
+
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  width: 100%;
+  height: $track-height;
+  padding: 0;
+  border-radius: $track-border-radius;
+  //margin-top: 25px;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(0.2, $track-foreground),
+      color-stop(0.2, $track-background)
+  );
+  outline: none;
+  margin-top: 1.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  width: $thumb-size;
+  height: $thumb-size;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  //background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fefefe), color-stop(0.49, #d7d7d7), color-stop(0.51, #d1d1d1), color-stop(1, #c8c8c8) );
+  background-color: $thumb-background;
+  //border: 2px solid #fff;
+}

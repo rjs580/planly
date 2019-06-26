@@ -26,8 +26,7 @@
 .btn-planly {
   @extend .btn;
   @extend .rounded-pill;
-  @extend .p-m-0;
-  @extend .px-3;
+  @extend .py-1;
 
   color: white;
   background-color: $accent-secondary;

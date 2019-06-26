@@ -1,0 +1,8 @@
+.footer-link {
+  color: $font-secondary !important;
+  text-decoration: none !important;
+
+  &:hover {
+    color: $font-primary;
+  }
+}
