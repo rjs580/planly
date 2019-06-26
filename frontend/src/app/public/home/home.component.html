@@ -1,11 +1,9 @@
 <section class="section-0">
   <div class="row flex-md-row-reverse align-items-center justify-content-center height-400">
     <div class="col-8 col-sm-5 col-md-4 col-lg-4 d-flex justify-content-center">
-      <img src="assets/img/home/img1.svg" class="img-fluid" style="max-height: 280px;" alt="">
-
-      <!--    <ng-container *ngFor="let img of homeImgs">-->
-      <!--      <img [src]="img.src" class="img-fluid img-fade" [ngStyle]="{'opacity': img.opacity, 'height': img.opacity == 0 ? '0px' : 'auto'}" style="max-height: 280px; max-width: 300px;" alt="">-->
-      <!--    </ng-container>-->
+      <ng-container *ngFor="let img of homeImgs">
+        <img [src]="img.src" class="img-fluid img-fade" [ngStyle]="{'opacity': img.opacity, 'height': img.opacity == 0 ? '0px' : 'auto'}" style="max-height: 280px; max-width: 300px; image-rendering: smooth;" alt="">
+      </ng-container>
     </div>
     <div class="col-sm-12 col-md-8 text-left d-flex justify-content-center">
       <div class="h3">A plan for <span class="h1 font-weight-bold">you</span>,<br>not just your money.

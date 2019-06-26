@@ -8,12 +8,13 @@ import {HomeImage} from "../../shared/models/home-image";
 })
 export class HomeComponent implements OnInit, OnDestroy {
   private homeImgPath = "assets/img/home/";
+
   private homeImgNames = [
-    "img1.svg",
-    "img2.svg",
-    "img3.svg",
-    "img4.svg",
-    "img5.svg"
+    "1.jpg",
+    "2.jpg",
+    "3.jpg",
+    "4.jpg",
+    "5.jpg"
   ];
 
   public homeImgs = [
@@ -41,7 +42,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   changeHeaderImage() {
-    return; // TODO: Fix images and remove this
+    // return; // TODO: Fix images and remove this
 
     this.homeImgs[this.homeImgIndex].opacity = "0";
     this.homeImgIndex++;
