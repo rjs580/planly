@@ -1,36 +1,45 @@
-import { Component, OnInit } from "@angular/core";
-import {NAVBAR_ITEMS} from "../navbar.items";
+import {AfterViewInit, Component, OnInit} from "@angular/core";
+import {PUBLIC_NAVBAR_ITEMS} from "../navbar.items";
 import {NavbarItems} from "../../../../shared/models/navbar-items.enum";
+
+import * as $ from "jquery";
+import {AuthService} from "../../../services/auth/auth.service";
 
 @Component({
   selector: "public-navbar",
   templateUrl: "./public-navbar.component.html",
   styleUrls: ["./public-navbar.component.scss"]
 })
-export class PublicNavbarComponent implements OnInit {
-  public navbarItems = NAVBAR_ITEMS;
+export class PublicNavbarComponent implements OnInit, AfterViewInit {
+  public navbarItems = PUBLIC_NAVBAR_ITEMS;
   public NavbarItems = NavbarItems;
 
-  constructor() { }
+  constructor(private auth: AuthService) {
+  }
 
   ngOnInit() {
   }
 
-  toggleSidebar(hamburger: HTMLButtonElement, sidebar: HTMLDivElement, overlay: HTMLDivElement, event: Event) {
-    if (hamburger.classList.contains("is-active")) {
-      hamburger.classList.remove("is-active");
-      sidebar.classList.remove("px-3");
-      sidebar.style.width = "0";
-      overlay.style.opacity = "0";
-      overlay.style.visibility = "hidden";
-    } else {
-      hamburger.classList.add("is-active");
-      sidebar.classList.add("px-3");
-      sidebar.style.width = "250px";
-      overlay.style.visibility = "visible";
-      overlay.style.opacity = "1";
-    }
+  ngAfterViewInit(): void {
+    $(".loginButton").click((event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      this.logInClicked();
+    });
 
-    event.stopPropagation();
+    $(".getPlanlyButton").click((event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      this.getPlanlyClicked();
+    });
+  }
+
+  logInClicked() {
+    this.auth.login();
+  }
+
+  getPlanlyClicked() {
   }
 }

@@ -1,0 +1,28 @@
+<nav class="fixed-top navbar navbar-expand-md navbar-light bg-light d-block px-0" id="navbar">
+  <div class="body-wrapper d-flex justify-content-between">
+    <a href="#" class="navbar-brand">
+      <img class="img-brand" src="assets/img/logo/brand.svg" alt="">
+    </a>
+
+    <div class="navbar-toggler">
+      <button #hamburger class="hamburger hamburger--spin-r p-m-0" type="button" (click)="toggleSidebar(hamburger, sidebar, overlay, $event)">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <div class="navbar-nav ml-auto text-nowrap">
+        <ng-content select="[navbar]"></ng-content>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div #sidebar class="sidebar">
+  <ng-content select="[sidebar]"></ng-content>
+</div>
+
+<div #overlay class="sidebar-overlay"></div>
+

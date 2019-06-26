@@ -1,51 +1,33 @@
-<nav class="fixed-top navbar navbar-expand-md navbar-light bg-light d-block px-0">
-  <div class="body-wrapper d-flex justify-content-between">
-    <a href="#" class="navbar-brand">
-      <img class="img-brand" src="assets/img/logo/brand.svg" alt="">
-    </a>
-
-    <div class="navbar-toggler">
-      <button #hamburger class="hamburger hamburger--spin-r p-m-0" type="button" (click)="toggleSidebar(hamburger, sidebar, overlay, $event)">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-    </div>
-
-    <div class="collapse navbar-collapse">
-      <div class="navbar-nav ml-auto text-nowrap">
-        <ng-container *ngFor="let item of navbarItems" [ngSwitch]="item.type">
-          <ng-template [ngSwitchCase]="NavbarItems.LINK">
-            <a class="nav-item nav-link mx-3" [translate]="item.content"></a>
-          </ng-template>
-
-          <ng-template [ngSwitchCase]="NavbarItems.SEPARATOR">
-            <a class="nav-item nav-link disabled mx-1">{{item.content}}</a>
-          </ng-template>
-
-          <ng-template [ngSwitchCase]="NavbarItems.BUTTON">
-            <a class="nav-item nav-link nav-btn" href="#" [translate]="item.content"></a>
-          </ng-template>
-        </ng-container>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<div #sidebar class="sidebar">
-  <ng-container *ngFor="let item of navbarItems" [ngSwitch]="item.type">
+<reusable-navbar>
+  <!-- Navbar -->
+  <ng-container *ngFor="let item of navbarItems" [ngSwitch]="item.type" navbar>
     <ng-template [ngSwitchCase]="NavbarItems.LINK">
-      <a class="nav-item nav-link" [translate]="item.content"></a>
+      <a class="nav-item nav-link mx-3" [translate]="item.content" [routerLink]="item.link"></a>
     </ng-template>
 
     <ng-template [ngSwitchCase]="NavbarItems.SEPARATOR">
-      <hr class="nav-item nav-link disabled my-0 py-0">
+      <a class="nav-item nav-link disabled mx-1">{{item.content}}</a>
     </ng-template>
 
     <ng-template [ngSwitchCase]="NavbarItems.BUTTON">
-      <a class="nav-item nav-link nav-btn" href="#" [translate]="item.content"></a>
+      <a class="nav-item nav-link nav-btn {{item.link}}" [translate]="item.content" href="#"></a>
     </ng-template>
   </ng-container>
-</div>
 
-<div #overlay class="sidebar-overlay"></div>
+  <!-- Sidebar -->
+  <div sidebar>
+    <ng-container *ngFor="let item of navbarItems" [ngSwitch]="item.type">
+      <ng-template [ngSwitchCase]="NavbarItems.LINK">
+        <a class="nav-item nav-link" [translate]="item.content" [routerLink]="item.link"></a>
+      </ng-template>
+
+      <ng-template [ngSwitchCase]="NavbarItems.SEPARATOR">
+        <hr class="nav-item nav-link disabled my-0 py-0">
+      </ng-template>
+
+      <ng-template [ngSwitchCase]="NavbarItems.BUTTON">
+        <a class="nav-item nav-link nav-btn {{item.link}}" [translate]="item.content" href="#"></a>
+      </ng-template>
+    </ng-container>
+  </div>
+</reusable-navbar>

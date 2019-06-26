@@ -6,9 +6,10 @@ import {SharedModule} from "../shared/shared.module";
 import { PublicNavbarComponent } from "./components/navbar/public-navbar/public-navbar.component";
 import { PrivateNavbarComponent } from "./components/navbar/private-navbar/private-navbar.component";
 import {AuthService} from "./services/auth/auth.service";
+import { ReusableNavbarComponent } from "./components/navbar/reusable-navbar/reusable-navbar.component";
 
 @NgModule({
-  declarations: [PublicNavbarComponent, PrivateNavbarComponent],
+  declarations: [PublicNavbarComponent, PrivateNavbarComponent, ReusableNavbarComponent],
   exports: [
     PrivateNavbarComponent,
     PublicNavbarComponent

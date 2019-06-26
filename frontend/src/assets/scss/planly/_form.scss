@@ -1,0 +1,16 @@
+.planly-control {
+  @extend .rounded-pill;
+
+  border: 2px solid $accent-secondary;
+
+  &:focus {
+    border-color: $accent-secondary;
+    box-shadow: inset 0 1px 1px rgba($accent-secondary, 0.075), 0 0 0 0.2rem rgba($accent-secondary, 0.25);
+  }
+}
+
+.planly-label {
+  @extend .ml-3;
+  @extend .font-weight-bold;
+  font-size: 1rem;
+}
