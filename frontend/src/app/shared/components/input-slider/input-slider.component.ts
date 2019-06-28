@@ -12,10 +12,15 @@ export class InputSliderComponent implements OnInit {
   @Input() value: number;
   @Output() valueChange: EventEmitter<any> = new EventEmitter();
 
+  private trackForeground: any;
+  private trackBackground: any;
+
   constructor() {
   }
 
   ngOnInit() {
+    this.trackForeground = window.getComputedStyle(document.body).getPropertyValue("--a-secondary");
+    this.trackBackground = window.getComputedStyle(document.body).getPropertyValue("--off-gray");
   }
 
   inputInit(input: HTMLInputElement): void {
@@ -34,8 +39,8 @@ export class InputSliderComponent implements OnInit {
       "linear, ",
       "left top, ",
       "right top, ",
-      "color-stop(" + val + ", #f8a074), ",
-      "color-stop(" + val + ", rgba(167, 169, 172))",
+      "color-stop(" + val + ", " + this.trackForeground.trim() + "), ",
+      "color-stop(" + val + ", " + this.trackBackground.trim() + ")",
       ")"
     ].join("");
 

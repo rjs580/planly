@@ -31,7 +31,7 @@ export class GetPlanlyService {
 
   contactUsHTML() {
     return "<img src='assets/img/about/top_image.svg' class='img-fluid' style='max-height: 120px;' alt=''>" +
-      "<p class='mt-4 mb-1'>See if planly is right for you</p>" +
+      "<p class='mt-4 mb-1'>See if Planly is right for you.</p>" +
       "<button id='chatWithAdvisor_GetPlanly' class='btn-planly btn-block'>Chat with an advisor</button>" +
       "<p class='mt-3 mb-1'>Ready to get started?</p>" +
       "<button id='reserveSpot_GetPlanly' class='btn-planly-alt btn-block'>Reserve your spot</button>";

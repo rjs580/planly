@@ -7,6 +7,9 @@
 @import "assets/scss/sweetalert2/variable"; // override sweetalert2 styling
 @import "~sweetalert2/src/sweetalert2"; // sweetalert2 styling
 
+// custom sweetalert2 properties
+@import "assets/scss/sweetalert2/sweetalert2";
+
 // custom bootstrap properties
 @import "assets/scss/bootstrap/reboot";
 @import "assets/scss/bootstrap/responsiveness";

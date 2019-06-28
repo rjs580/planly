@@ -43,7 +43,7 @@ export class PricingComponent implements OnInit {
         "the same person. We think robots are great,\n" +
         "but humans are much better at understanding \n" +
         "who you are. "),
-      new ProductDetail("Fiduciary responsibility", "fiduciary_1.svg", "Did we mention that we are legally abligated \n" +
+      new ProductDetail("Fiduciary responsibility", "fiduciary_1.svg", "Did we mention that we are legally obligated \n" +
         "to always put your best interests ahead of ours? \n" +
         "Because we are. (and it’s because we care \n" +
         "about you)")
