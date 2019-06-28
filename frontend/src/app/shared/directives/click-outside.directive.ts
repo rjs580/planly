@@ -19,7 +19,7 @@ export class ClickOutsideDirective {
     }
 
     const clickedInside = this.elementRef.nativeElement.contains(targetElement);
-    if (!clickedInside) {
+    if (!clickedInside || targetElement.classList.contains("nav-item")) {
       this.clickOutside.emit(event);
     }
   }

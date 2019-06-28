@@ -3,6 +3,8 @@ import {SweetAlert} from "./sweetalert.service";
 import * as $ from "jquery";
 import {Router} from "@angular/router";
 
+declare const Calendly;
+
 @Injectable()
 export class GetPlanlyService {
   constructor(private router: Router) {

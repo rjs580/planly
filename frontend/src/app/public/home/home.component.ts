@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     new HomeImage(this.homeImgPath + this.homeImgNames[4], "0")
   ];
 
-  private intervalId = setInterval(() => this.changeHeaderImage(), 2000);
+  private intervalId = setInterval(() => this.changeHeaderImage(), 750);
   private homeImgIndex = 0;
 
   public advisorValue: number;
