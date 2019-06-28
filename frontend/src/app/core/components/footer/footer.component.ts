@@ -8,6 +8,7 @@ import {SocialLink} from "../../../shared/models/social-link";
 })
 export class FooterComponent implements OnInit {
   public socialLinks: SocialLink[];
+  public date = new Date();
 
   constructor() {
     this.socialLinks = [{
