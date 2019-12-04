@@ -8,7 +8,7 @@ import {MainPublicComponent} from "./layouts/main-public/main-public.component";
 import {MainPrivateComponent} from "./layouts/main-private/main-private.component";
 
 const routes: Routes = [
-  {path: "", redirectTo: "home", pathMatch: "full"},
+  {path: "", redirectTo: "sign-in", pathMatch: "full"},
   {path: "", component: MainPublicComponent, children: PUBLIC_ROUTES},
   {path: "", component: MainPrivateComponent, children: PRIVATE_ROUTES, canActivate: [AuthGuard]},
   {path: "**", redirectTo: "page-not-found", pathMatch: "full"}
